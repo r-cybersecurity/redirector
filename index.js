@@ -20,11 +20,6 @@ export default {
   async scheduled(event, env, ctx) {
     const url = 'https://www.reddit.com/r/cybersecurity/new/.json';
 
-    /**
-     * gatherResponse awaits and returns a response body as a string.
-     * Use await gatherResponse(..) in an async function to get the response body
-     * @param {Response} response
-     */
     async function parseResponse(response) {
       const { headers } = response;
       const contentType = headers.get('content-type') || '';
