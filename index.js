@@ -9,7 +9,7 @@ export default {
         targetURL = await env.kv_redirector.get("mentorship");
       }
 
-      const statusCode = 302; // temporary redirect
+      const statusCode = 307; // temporary redirect
       console.log(`goto: ${targetURL}`);
       return Response.redirect(targetURL, statusCode);
     } catch(e) {
